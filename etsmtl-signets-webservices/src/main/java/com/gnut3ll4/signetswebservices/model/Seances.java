@@ -15,7 +15,6 @@ import org.ksoap2.serialization.*;
 
 public class Seances extends AttributeContainer implements KvmSerializable
 {
-
     
     public java.util.Date dateDebut;
     
@@ -33,6 +32,13 @@ public class Seances extends AttributeContainer implements KvmSerializable
 
     public Seances()
     {
+    }
+
+    public String getId() {
+        return coursGroupe +
+                dateDebut +
+                dateFin +
+                local;
     }
 
     public Seances(java.lang.Object paramObj, ExtendedSoapSerializationEnvelope __envelope)
