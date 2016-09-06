@@ -10,22 +10,20 @@ package com.gnut3ll4.signetswebservices.model;
 //---------------------------------------------------
 
 
-import com.gnut3ll4.signetswebservices.soap.DonneesRetournees;
-
 import java.util.Hashtable;
 import org.ksoap2.serialization.*;
 
-public class listeSeances extends DonneesRetournees implements KvmSerializable
+public class CoursHoraire extends HoraireActivite implements KvmSerializable
 {
 
     
-    public ArrayOfSeances ListeDesSeances;
+    public ArrayOfEnseignant listeProf;
 
-    public listeSeances()
+    public CoursHoraire()
     {
     }
 
-    public listeSeances(java.lang.Object paramObj, ExtendedSoapSerializationEnvelope __envelope)
+    public CoursHoraire(java.lang.Object paramObj, ExtendedSoapSerializationEnvelope __envelope)
     {
 	    super(paramObj, __envelope);
 	    if (paramObj == null)
@@ -42,12 +40,12 @@ public class listeSeances extends DonneesRetournees implements KvmSerializable
                 //if you have compilation error here, please use a ksoap2.jar and ExKsoap2.jar from libs folder (in the generated zip file)
                 PropertyInfo info=soapObject.getPropertyInfo(i0);
                 java.lang.Object obj = info.getValue(); 
-                if (info.name.equals("ListeDesSeances"))
+                if (info.name.equals("listeProf"))
                 {
                     if(obj!=null)
                     {
                         java.lang.Object j = obj;
-                        this.ListeDesSeances = new ArrayOfSeances(j,__envelope);
+                        this.listeProf = new ArrayOfEnseignant(j,__envelope);
                     }
                     continue;
                 }
@@ -67,7 +65,7 @@ public class listeSeances extends DonneesRetournees implements KvmSerializable
         //!!!!! You can find a correct version in Lib folder from generated zip file!!!!!
         if(propertyIndex==count+0)
         {
-            return this.ListeDesSeances!=null?this.ListeDesSeances:SoapPrimitive.NullSkip;
+            return this.listeProf!=null?this.listeProf:SoapPrimitive.NullSkip;
         }
         return super.getProperty(propertyIndex);
     }
@@ -85,7 +83,7 @@ public class listeSeances extends DonneesRetournees implements KvmSerializable
         if(propertyIndex==count+0)
         {
             info.type = PropertyInfo.VECTOR_CLASS;
-            info.name = "ListeDesSeances";
+            info.name = "listeProf";
             info.namespace= "http://etsmtl.ca/";
         }
         super.getPropertyInfo(propertyIndex,arg1,info);

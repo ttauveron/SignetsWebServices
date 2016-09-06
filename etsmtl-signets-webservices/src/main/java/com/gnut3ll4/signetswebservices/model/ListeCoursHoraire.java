@@ -15,17 +15,17 @@ import com.gnut3ll4.signetswebservices.soap.DonneesRetournees;
 import java.util.Hashtable;
 import org.ksoap2.serialization.*;
 
-public class listeCoursHoraire extends DonneesRetournees implements KvmSerializable
+public class ListeCoursHoraire extends DonneesRetournees implements KvmSerializable
 {
 
     
     public ArrayOfCoursHoraire listeCours;
 
-    public listeCoursHoraire()
+    public ListeCoursHoraire()
     {
     }
 
-    public listeCoursHoraire(java.lang.Object paramObj, ExtendedSoapSerializationEnvelope __envelope)
+    public ListeCoursHoraire(java.lang.Object paramObj, ExtendedSoapSerializationEnvelope __envelope)
     {
 	    super(paramObj, __envelope);
 	    if (paramObj == null)

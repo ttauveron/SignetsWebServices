@@ -396,8 +396,8 @@ public class SignetsMobileSoap {
         });
     }
 
-    public listeDesProgrammes listeProgrammes(final String codeAccesUniversel, final String motPasse) throws Exception {
-        return (listeDesProgrammes) execute(new IWcfMethod() {
+    public ListeDesProgrammes listeProgrammes(final String codeAccesUniversel, final String motPasse) throws Exception {
+        return (ListeDesProgrammes) execute(new IWcfMethod() {
             @Override
             public ExtendedSoapSerializationEnvelope CreateSoapEnvelope() {
                 ExtendedSoapSerializationEnvelope __envelope = createEnvelope();
@@ -422,21 +422,21 @@ public class SignetsMobileSoap {
 
             @Override
             public Object ProcessResult(ExtendedSoapSerializationEnvelope __envelope, Object __result) throws Exception {
-                return (listeDesProgrammes) getResult(listeDesProgrammes.class, __result, "listeProgrammesResult", __envelope);
+                return (ListeDesProgrammes) getResult(ListeDesProgrammes.class, __result, "listeProgrammesResult", __envelope);
             }
         }, "http://etsmtl.ca/listeProgrammes");
     }
 
-    public AsyncTask<Void, Void, OperationResult<listeDesProgrammes>> listeProgrammesAsync(final String codeAccesUniversel, final String motPasse) {
-        return executeAsync(new Functions.IFunc<listeDesProgrammes>() {
-            public listeDesProgrammes Func() throws Exception {
+    public AsyncTask<Void, Void, OperationResult<ListeDesProgrammes>> listeProgrammesAsync(final String codeAccesUniversel, final String motPasse) {
+        return executeAsync(new Functions.IFunc<ListeDesProgrammes>() {
+            public ListeDesProgrammes Func() throws Exception {
                 return listeProgrammes(codeAccesUniversel, motPasse);
             }
         });
     }
 
-    public listeDesCoequipiers listeCoequipiers(final String codeAccesUniversel, final String motPasse, final String pSigle, final String pGroupe, final String pSession, final String pNomElementEval) throws Exception {
-        return (listeDesCoequipiers) execute(new IWcfMethod() {
+    public ListeDesCoequipiers listeCoequipiers(final String codeAccesUniversel, final String motPasse, final String pSigle, final String pGroupe, final String pSession, final String pNomElementEval) throws Exception {
+        return (ListeDesCoequipiers) execute(new IWcfMethod() {
             @Override
             public ExtendedSoapSerializationEnvelope CreateSoapEnvelope() {
                 ExtendedSoapSerializationEnvelope __envelope = createEnvelope();
@@ -485,14 +485,14 @@ public class SignetsMobileSoap {
 
             @Override
             public Object ProcessResult(ExtendedSoapSerializationEnvelope __envelope, Object __result) throws Exception {
-                return getResult(listeDesCoequipiers.class, __result, "listeCoequipiersResult", __envelope);
+                return getResult(ListeDesCoequipiers.class, __result, "listeCoequipiersResult", __envelope);
             }
         }, "http://etsmtl.ca/listeCoequipiers");
     }
 
-    public AsyncTask<Void, Void, OperationResult<listeDesCoequipiers>> listeCoequipiersAsync(final String codeAccesUniversel, final String motPasse, final String pSigle, final String pGroupe, final String pSession, final String pNomElementEval) {
-        return executeAsync(new Functions.IFunc<listeDesCoequipiers>() {
-            public listeDesCoequipiers Func() throws Exception {
+    public AsyncTask<Void, Void, OperationResult<ListeDesCoequipiers>> listeCoequipiersAsync(final String codeAccesUniversel, final String motPasse, final String pSigle, final String pGroupe, final String pSession, final String pNomElementEval) {
+        return executeAsync(new Functions.IFunc<ListeDesCoequipiers>() {
+            public ListeDesCoequipiers Func() throws Exception {
                 return listeCoequipiers(codeAccesUniversel, motPasse, pSigle, pGroupe, pSession, pNomElementEval);
             }
         });
@@ -555,8 +555,8 @@ public class SignetsMobileSoap {
         });
     }
 
-    public listeDesActivitesEtProf listeHoraireEtProf(final String codeAccesUniversel, final String motPasse, final String pSession) throws Exception {
-        return (listeDesActivitesEtProf) execute(new IWcfMethod() {
+    public ListeDesActivitesEtProf listeHoraireEtProf(final String codeAccesUniversel, final String motPasse, final String pSession) throws Exception {
+        return (ListeDesActivitesEtProf) execute(new IWcfMethod() {
             @Override
             public ExtendedSoapSerializationEnvelope CreateSoapEnvelope() {
                 ExtendedSoapSerializationEnvelope __envelope = createEnvelope();
@@ -587,21 +587,21 @@ public class SignetsMobileSoap {
 
             @Override
             public Object ProcessResult(ExtendedSoapSerializationEnvelope __envelope, Object __result) throws Exception {
-                return getResult(listeDesActivitesEtProf.class, __result, "listeHoraireEtProfResult", __envelope);
+                return getResult(ListeDesActivitesEtProf.class, __result, "listeHoraireEtProfResult", __envelope);
             }
         }, "http://etsmtl.ca/listeHoraireEtProf");
     }
 
-    public AsyncTask<Void, Void, OperationResult<listeDesActivitesEtProf>> listeHoraireEtProfAsync(final String codeAccesUniversel, final String motPasse, final String pSession) {
-        return executeAsync(new Functions.IFunc<listeDesActivitesEtProf>() {
-            public listeDesActivitesEtProf Func() throws Exception {
+    public AsyncTask<Void, Void, OperationResult<ListeDesActivitesEtProf>> listeHoraireEtProfAsync(final String codeAccesUniversel, final String motPasse, final String pSession) {
+        return executeAsync(new Functions.IFunc<ListeDesActivitesEtProf>() {
+            public ListeDesActivitesEtProf Func() throws Exception {
                 return listeHoraireEtProf(codeAccesUniversel, motPasse, pSession);
             }
         });
     }
 
-    public listeHoraireExamensFinaux listeHoraireExamensFin(final String codeAccesUniversel, final String motPasse, final String pSession) throws Exception {
-        return (listeHoraireExamensFinaux) execute(new IWcfMethod() {
+    public ListeHoraireExamensFinaux listeHoraireExamensFin(final String codeAccesUniversel, final String motPasse, final String pSession) throws Exception {
+        return (ListeHoraireExamensFinaux) execute(new IWcfMethod() {
             @Override
             public ExtendedSoapSerializationEnvelope CreateSoapEnvelope() {
                 ExtendedSoapSerializationEnvelope __envelope = createEnvelope();
@@ -632,21 +632,21 @@ public class SignetsMobileSoap {
 
             @Override
             public Object ProcessResult(ExtendedSoapSerializationEnvelope __envelope, Object __result) throws Exception {
-                return getResult(listeHoraireExamensFinaux.class, __result, "listeHoraireExamensFinResult", __envelope);
+                return getResult(ListeHoraireExamensFinaux.class, __result, "listeHoraireExamensFinResult", __envelope);
             }
         }, "http://etsmtl.ca/listeHoraireExamensFin");
     }
 
-    public AsyncTask<Void, Void, OperationResult<listeHoraireExamensFinaux>> listeHoraireExamensFinAsync(final String codeAccesUniversel, final String motPasse, final String pSession) {
-        return executeAsync(new Functions.IFunc<listeHoraireExamensFinaux>() {
-            public listeHoraireExamensFinaux Func() throws Exception {
+    public AsyncTask<Void, Void, OperationResult<ListeHoraireExamensFinaux>> listeHoraireExamensFinAsync(final String codeAccesUniversel, final String motPasse, final String pSession) {
+        return executeAsync(new Functions.IFunc<ListeHoraireExamensFinaux>() {
+            public ListeHoraireExamensFinaux Func() throws Exception {
                 return listeHoraireExamensFin(codeAccesUniversel, motPasse, pSession);
             }
         });
     }
 
-    public listeCoursHoraire lireHoraire(final String pSession, final String prefixeSigleCours) throws Exception {
-        return (listeCoursHoraire) execute(new IWcfMethod() {
+    public ListeCoursHoraire lireHoraire(final String pSession, final String prefixeSigleCours) throws Exception {
+        return (ListeCoursHoraire) execute(new IWcfMethod() {
             @Override
             public ExtendedSoapSerializationEnvelope CreateSoapEnvelope() {
                 ExtendedSoapSerializationEnvelope __envelope = createEnvelope();
@@ -671,21 +671,21 @@ public class SignetsMobileSoap {
 
             @Override
             public Object ProcessResult(ExtendedSoapSerializationEnvelope __envelope, Object __result) throws Exception {
-                return getResult(listeCoursHoraire.class, __result, "lireHoraireResult", __envelope);
+                return getResult(ListeCoursHoraire.class, __result, "lireHoraireResult", __envelope);
             }
         }, "http://etsmtl.ca/lireHoraire");
     }
 
-    public AsyncTask<Void, Void, OperationResult<listeCoursHoraire>> lireHoraireAsync(final String pSession, final String prefixeSigleCours) {
-        return executeAsync(new Functions.IFunc<listeCoursHoraire>() {
-            public listeCoursHoraire Func() throws Exception {
+    public AsyncTask<Void, Void, OperationResult<ListeCoursHoraire>> lireHoraireAsync(final String pSession, final String prefixeSigleCours) {
+        return executeAsync(new Functions.IFunc<ListeCoursHoraire>() {
+            public ListeCoursHoraire Func() throws Exception {
                 return lireHoraire(pSession, prefixeSigleCours);
             }
         });
     }
 
-    public listeJoursRemplaces lireJoursRemplaces(final String pSession) throws Exception {
-        return (listeJoursRemplaces) execute(new IWcfMethod() {
+    public ListeJoursRemplaces lireJoursRemplaces(final String pSession) throws Exception {
+        return (ListeJoursRemplaces) execute(new IWcfMethod() {
             @Override
             public ExtendedSoapSerializationEnvelope CreateSoapEnvelope() {
                 ExtendedSoapSerializationEnvelope __envelope = createEnvelope();
@@ -704,21 +704,21 @@ public class SignetsMobileSoap {
 
             @Override
             public Object ProcessResult(ExtendedSoapSerializationEnvelope __envelope, Object __result) throws Exception {
-                return getResult(listeJoursRemplaces.class, __result, "lireJoursRemplacesResult", __envelope);
+                return getResult(ListeJoursRemplaces.class, __result, "lireJoursRemplacesResult", __envelope);
             }
         }, "http://etsmtl.ca/lireJoursRemplaces");
     }
 
-    public AsyncTask<Void, Void, OperationResult<listeJoursRemplaces>> lireJoursRemplacesAsync(final String pSession) {
-        return executeAsync(new Functions.IFunc<listeJoursRemplaces>() {
-            public listeJoursRemplaces Func() throws Exception {
+    public AsyncTask<Void, Void, OperationResult<ListeJoursRemplaces>> lireJoursRemplacesAsync(final String pSession) {
+        return executeAsync(new Functions.IFunc<ListeJoursRemplaces>() {
+            public ListeJoursRemplaces Func() throws Exception {
                 return lireJoursRemplaces(pSession);
             }
         });
     }
 
-    public listeSeances lireHoraireDesSeances(final String codeAccesUniversel, final String motPasse, final String pCoursGroupe, final String pSession, final String pDateDebut, final String pDateFin) throws Exception {
-        return (listeSeances) execute(new IWcfMethod() {
+    public ListeSeances lireHoraireDesSeances(final String codeAccesUniversel, final String motPasse, final String pCoursGroupe, final String pSession, final String pDateDebut, final String pDateFin) throws Exception {
+        return (ListeSeances) execute(new IWcfMethod() {
             @Override
             public ExtendedSoapSerializationEnvelope CreateSoapEnvelope() {
                 ExtendedSoapSerializationEnvelope __envelope = createEnvelope();
@@ -767,14 +767,14 @@ public class SignetsMobileSoap {
 
             @Override
             public Object ProcessResult(ExtendedSoapSerializationEnvelope __envelope, Object __result) throws Exception {
-                return getResult(listeSeances.class, __result, "lireHoraireDesSeancesResult", __envelope);
+                return getResult(ListeSeances.class, __result, "lireHoraireDesSeancesResult", __envelope);
             }
         }, "http://etsmtl.ca/lireHoraireDesSeances");
     }
 
-    public AsyncTask<Void, Void, OperationResult<listeSeances>> lireHoraireDesSeancesAsync(final String codeAccesUniversel, final String motPasse, final String pCoursGroupe, final String pSession, final String pDateDebut, final String pDateFin) {
-        return executeAsync(new Functions.IFunc<listeSeances>() {
-            public listeSeances Func() throws Exception {
+    public AsyncTask<Void, Void, OperationResult<ListeSeances>> lireHoraireDesSeancesAsync(final String codeAccesUniversel, final String motPasse, final String pCoursGroupe, final String pSession, final String pDateDebut, final String pDateFin) {
+        return executeAsync(new Functions.IFunc<ListeSeances>() {
+            public ListeSeances Func() throws Exception {
                 return lireHoraireDesSeances(codeAccesUniversel, motPasse, pCoursGroupe, pSession, pDateDebut, pDateFin);
             }
         });

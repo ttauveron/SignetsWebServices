@@ -15,19 +15,17 @@ import com.gnut3ll4.signetswebservices.soap.DonneesRetournees;
 import java.util.Hashtable;
 import org.ksoap2.serialization.*;
 
-public class listeDesActivitesEtProf extends DonneesRetournees implements KvmSerializable
+public class ListeSeances extends DonneesRetournees implements KvmSerializable
 {
 
     
-    public ArrayOfHoraireActivite listeActivites;
-    
-    public ArrayOfEnseignant listeEnseignants;
+    public ArrayOfSeances listeDesSeances;
 
-    public listeDesActivitesEtProf()
+    public ListeSeances()
     {
     }
 
-    public listeDesActivitesEtProf(java.lang.Object paramObj, ExtendedSoapSerializationEnvelope __envelope)
+    public ListeSeances(java.lang.Object paramObj, ExtendedSoapSerializationEnvelope __envelope)
     {
 	    super(paramObj, __envelope);
 	    if (paramObj == null)
@@ -44,21 +42,12 @@ public class listeDesActivitesEtProf extends DonneesRetournees implements KvmSer
                 //if you have compilation error here, please use a ksoap2.jar and ExKsoap2.jar from libs folder (in the generated zip file)
                 PropertyInfo info=soapObject.getPropertyInfo(i0);
                 java.lang.Object obj = info.getValue(); 
-                if (info.name.equals("listeActivites"))
+                if (info.name.equals("ListeDesSeances"))
                 {
                     if(obj!=null)
                     {
                         java.lang.Object j = obj;
-                        this.listeActivites = new ArrayOfHoraireActivite(j,__envelope);
-                    }
-                    continue;
-                }
-                if (info.name.equals("listeEnseignants"))
-                {
-                    if(obj!=null)
-                    {
-                        java.lang.Object j = obj;
-                        this.listeEnseignants = new ArrayOfEnseignant(j,__envelope);
+                        this.listeDesSeances = new ArrayOfSeances(j,__envelope);
                     }
                     continue;
                 }
@@ -78,11 +67,7 @@ public class listeDesActivitesEtProf extends DonneesRetournees implements KvmSer
         //!!!!! You can find a correct version in Lib folder from generated zip file!!!!!
         if(propertyIndex==count+0)
         {
-            return this.listeActivites!=null?this.listeActivites:SoapPrimitive.NullSkip;
-        }
-        if(propertyIndex==count+1)
-        {
-            return this.listeEnseignants!=null?this.listeEnseignants:SoapPrimitive.NullSkip;
+            return this.listeDesSeances !=null?this.listeDesSeances :SoapPrimitive.NullSkip;
         }
         return super.getProperty(propertyIndex);
     }
@@ -90,7 +75,7 @@ public class listeDesActivitesEtProf extends DonneesRetournees implements KvmSer
 
     @Override
     public int getPropertyCount() {
-        return super.getPropertyCount()+2;
+        return super.getPropertyCount()+1;
     }
 
     @Override
@@ -100,13 +85,7 @@ public class listeDesActivitesEtProf extends DonneesRetournees implements KvmSer
         if(propertyIndex==count+0)
         {
             info.type = PropertyInfo.VECTOR_CLASS;
-            info.name = "listeActivites";
-            info.namespace= "http://etsmtl.ca/";
-        }
-        if(propertyIndex==count+1)
-        {
-            info.type = PropertyInfo.VECTOR_CLASS;
-            info.name = "listeEnseignants";
+            info.name = "ListeDesSeances";
             info.namespace= "http://etsmtl.ca/";
         }
         super.getPropertyInfo(propertyIndex,arg1,info);

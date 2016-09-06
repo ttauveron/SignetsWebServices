@@ -15,17 +15,17 @@ import com.gnut3ll4.signetswebservices.soap.DonneesRetournees;
 import java.util.Hashtable;
 import org.ksoap2.serialization.*;
 
-public class listeDesCoequipiers extends DonneesRetournees implements KvmSerializable
+public class ListeDesCoequipiers extends DonneesRetournees implements KvmSerializable
 {
 
     
     public ArrayOfPersonne liste;
 
-    public listeDesCoequipiers()
+    public ListeDesCoequipiers()
     {
     }
 
-    public listeDesCoequipiers(java.lang.Object paramObj, ExtendedSoapSerializationEnvelope __envelope)
+    public ListeDesCoequipiers(java.lang.Object paramObj, ExtendedSoapSerializationEnvelope __envelope)
     {
 	    super(paramObj, __envelope);
 	    if (paramObj == null)

@@ -10,20 +10,22 @@ package com.gnut3ll4.signetswebservices.model;
 //---------------------------------------------------
 
 
+import com.gnut3ll4.signetswebservices.soap.DonneesRetournees;
+
 import java.util.Hashtable;
 import org.ksoap2.serialization.*;
 
-public class coursHoraire extends HoraireActivite implements KvmSerializable
+public class ListeHoraireExamensFinaux extends DonneesRetournees implements KvmSerializable
 {
 
     
-    public ArrayOfEnseignant listeProf;
+    public ArrayOfHoraireExamenFinal listeHoraire;
 
-    public coursHoraire()
+    public ListeHoraireExamensFinaux()
     {
     }
 
-    public coursHoraire(java.lang.Object paramObj, ExtendedSoapSerializationEnvelope __envelope)
+    public ListeHoraireExamensFinaux(java.lang.Object paramObj, ExtendedSoapSerializationEnvelope __envelope)
     {
 	    super(paramObj, __envelope);
 	    if (paramObj == null)
@@ -40,12 +42,12 @@ public class coursHoraire extends HoraireActivite implements KvmSerializable
                 //if you have compilation error here, please use a ksoap2.jar and ExKsoap2.jar from libs folder (in the generated zip file)
                 PropertyInfo info=soapObject.getPropertyInfo(i0);
                 java.lang.Object obj = info.getValue(); 
-                if (info.name.equals("listeProf"))
+                if (info.name.equals("listeHoraire"))
                 {
                     if(obj!=null)
                     {
                         java.lang.Object j = obj;
-                        this.listeProf = new ArrayOfEnseignant(j,__envelope);
+                        this.listeHoraire = new ArrayOfHoraireExamenFinal(j,__envelope);
                     }
                     continue;
                 }
@@ -65,7 +67,7 @@ public class coursHoraire extends HoraireActivite implements KvmSerializable
         //!!!!! You can find a correct version in Lib folder from generated zip file!!!!!
         if(propertyIndex==count+0)
         {
-            return this.listeProf!=null?this.listeProf:SoapPrimitive.NullSkip;
+            return this.listeHoraire!=null?this.listeHoraire:SoapPrimitive.NullSkip;
         }
         return super.getProperty(propertyIndex);
     }
@@ -83,7 +85,7 @@ public class coursHoraire extends HoraireActivite implements KvmSerializable
         if(propertyIndex==count+0)
         {
             info.type = PropertyInfo.VECTOR_CLASS;
-            info.name = "listeProf";
+            info.name = "listeHoraire";
             info.namespace= "http://etsmtl.ca/";
         }
         super.getPropertyInfo(propertyIndex,arg1,info);

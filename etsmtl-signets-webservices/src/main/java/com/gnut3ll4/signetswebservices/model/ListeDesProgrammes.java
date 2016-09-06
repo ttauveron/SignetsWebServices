@@ -10,22 +10,20 @@ package com.gnut3ll4.signetswebservices.model;
 //---------------------------------------------------
 
 
-import com.gnut3ll4.signetswebservices.soap.DonneesRetournees;
-
 import java.util.Hashtable;
 import org.ksoap2.serialization.*;
 
-public class listeJoursRemplaces extends DonneesRetournees implements KvmSerializable
+public class ListeDesProgrammes extends DonneesRetournees implements KvmSerializable
 {
 
     
-    public ArrayOfJoursRemplaces listeJours;
+    public ArrayOfProgramme liste;
 
-    public listeJoursRemplaces()
+    public ListeDesProgrammes()
     {
     }
 
-    public listeJoursRemplaces(java.lang.Object paramObj, ExtendedSoapSerializationEnvelope __envelope)
+    public ListeDesProgrammes(java.lang.Object paramObj, ExtendedSoapSerializationEnvelope __envelope)
     {
 	    super(paramObj, __envelope);
 	    if (paramObj == null)
@@ -42,12 +40,12 @@ public class listeJoursRemplaces extends DonneesRetournees implements KvmSeriali
                 //if you have compilation error here, please use a ksoap2.jar and ExKsoap2.jar from libs folder (in the generated zip file)
                 PropertyInfo info=soapObject.getPropertyInfo(i0);
                 java.lang.Object obj = info.getValue(); 
-                if (info.name.equals("listeJours"))
+                if (info.name.equals("liste"))
                 {
                     if(obj!=null)
                     {
                         java.lang.Object j = obj;
-                        this.listeJours = new ArrayOfJoursRemplaces(j,__envelope);
+                        this.liste = new ArrayOfProgramme(j,__envelope);
                     }
                     continue;
                 }
@@ -67,7 +65,7 @@ public class listeJoursRemplaces extends DonneesRetournees implements KvmSeriali
         //!!!!! You can find a correct version in Lib folder from generated zip file!!!!!
         if(propertyIndex==count+0)
         {
-            return this.listeJours!=null?this.listeJours:SoapPrimitive.NullSkip;
+            return this.liste!=null?this.liste:SoapPrimitive.NullSkip;
         }
         return super.getProperty(propertyIndex);
     }
@@ -85,7 +83,7 @@ public class listeJoursRemplaces extends DonneesRetournees implements KvmSeriali
         if(propertyIndex==count+0)
         {
             info.type = PropertyInfo.VECTOR_CLASS;
-            info.name = "listeJours";
+            info.name = "liste";
             info.namespace= "http://etsmtl.ca/";
         }
         super.getPropertyInfo(propertyIndex,arg1,info);

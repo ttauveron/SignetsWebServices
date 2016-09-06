@@ -15,17 +15,19 @@ import com.gnut3ll4.signetswebservices.soap.DonneesRetournees;
 import java.util.Hashtable;
 import org.ksoap2.serialization.*;
 
-public class listeHoraireExamensFinaux extends DonneesRetournees implements KvmSerializable
+public class ListeDesActivitesEtProf extends DonneesRetournees implements KvmSerializable
 {
 
     
-    public ArrayOfHoraireExamenFinal listeHoraire;
+    public ArrayOfHoraireActivite listeActivites;
+    
+    public ArrayOfEnseignant listeEnseignants;
 
-    public listeHoraireExamensFinaux()
+    public ListeDesActivitesEtProf()
     {
     }
 
-    public listeHoraireExamensFinaux(java.lang.Object paramObj, ExtendedSoapSerializationEnvelope __envelope)
+    public ListeDesActivitesEtProf(java.lang.Object paramObj, ExtendedSoapSerializationEnvelope __envelope)
     {
 	    super(paramObj, __envelope);
 	    if (paramObj == null)
@@ -42,12 +44,21 @@ public class listeHoraireExamensFinaux extends DonneesRetournees implements KvmS
                 //if you have compilation error here, please use a ksoap2.jar and ExKsoap2.jar from libs folder (in the generated zip file)
                 PropertyInfo info=soapObject.getPropertyInfo(i0);
                 java.lang.Object obj = info.getValue(); 
-                if (info.name.equals("listeHoraire"))
+                if (info.name.equals("listeActivites"))
                 {
                     if(obj!=null)
                     {
                         java.lang.Object j = obj;
-                        this.listeHoraire = new ArrayOfHoraireExamenFinal(j,__envelope);
+                        this.listeActivites = new ArrayOfHoraireActivite(j,__envelope);
+                    }
+                    continue;
+                }
+                if (info.name.equals("listeEnseignants"))
+                {
+                    if(obj!=null)
+                    {
+                        java.lang.Object j = obj;
+                        this.listeEnseignants = new ArrayOfEnseignant(j,__envelope);
                     }
                     continue;
                 }
@@ -67,7 +78,11 @@ public class listeHoraireExamensFinaux extends DonneesRetournees implements KvmS
         //!!!!! You can find a correct version in Lib folder from generated zip file!!!!!
         if(propertyIndex==count+0)
         {
-            return this.listeHoraire!=null?this.listeHoraire:SoapPrimitive.NullSkip;
+            return this.listeActivites!=null?this.listeActivites:SoapPrimitive.NullSkip;
+        }
+        if(propertyIndex==count+1)
+        {
+            return this.listeEnseignants!=null?this.listeEnseignants:SoapPrimitive.NullSkip;
         }
         return super.getProperty(propertyIndex);
     }
@@ -75,7 +90,7 @@ public class listeHoraireExamensFinaux extends DonneesRetournees implements KvmS
 
     @Override
     public int getPropertyCount() {
-        return super.getPropertyCount()+1;
+        return super.getPropertyCount()+2;
     }
 
     @Override
@@ -85,7 +100,13 @@ public class listeHoraireExamensFinaux extends DonneesRetournees implements KvmS
         if(propertyIndex==count+0)
         {
             info.type = PropertyInfo.VECTOR_CLASS;
-            info.name = "listeHoraire";
+            info.name = "listeActivites";
+            info.namespace= "http://etsmtl.ca/";
+        }
+        if(propertyIndex==count+1)
+        {
+            info.type = PropertyInfo.VECTOR_CLASS;
+            info.name = "listeEnseignants";
             info.namespace= "http://etsmtl.ca/";
         }
         super.getPropertyInfo(propertyIndex,arg1,info);

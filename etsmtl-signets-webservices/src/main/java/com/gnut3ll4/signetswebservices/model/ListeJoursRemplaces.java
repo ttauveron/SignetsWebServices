@@ -10,20 +10,22 @@ package com.gnut3ll4.signetswebservices.model;
 //---------------------------------------------------
 
 
+import com.gnut3ll4.signetswebservices.soap.DonneesRetournees;
+
 import java.util.Hashtable;
 import org.ksoap2.serialization.*;
 
-public class listeDesProgrammes extends DonneesRetournees implements KvmSerializable
+public class ListeJoursRemplaces extends DonneesRetournees implements KvmSerializable
 {
 
     
-    public ArrayOfProgramme liste;
+    public ArrayOfJoursRemplaces listeJours;
 
-    public listeDesProgrammes()
+    public ListeJoursRemplaces()
     {
     }
 
-    public listeDesProgrammes(java.lang.Object paramObj, ExtendedSoapSerializationEnvelope __envelope)
+    public ListeJoursRemplaces(java.lang.Object paramObj, ExtendedSoapSerializationEnvelope __envelope)
     {
 	    super(paramObj, __envelope);
 	    if (paramObj == null)
@@ -40,12 +42,12 @@ public class listeDesProgrammes extends DonneesRetournees implements KvmSerializ
                 //if you have compilation error here, please use a ksoap2.jar and ExKsoap2.jar from libs folder (in the generated zip file)
                 PropertyInfo info=soapObject.getPropertyInfo(i0);
                 java.lang.Object obj = info.getValue(); 
-                if (info.name.equals("liste"))
+                if (info.name.equals("listeJours"))
                 {
                     if(obj!=null)
                     {
                         java.lang.Object j = obj;
-                        this.liste = new ArrayOfProgramme(j,__envelope);
+                        this.listeJours = new ArrayOfJoursRemplaces(j,__envelope);
                     }
                     continue;
                 }
@@ -65,7 +67,7 @@ public class listeDesProgrammes extends DonneesRetournees implements KvmSerializ
         //!!!!! You can find a correct version in Lib folder from generated zip file!!!!!
         if(propertyIndex==count+0)
         {
-            return this.liste!=null?this.liste:SoapPrimitive.NullSkip;
+            return this.listeJours!=null?this.listeJours:SoapPrimitive.NullSkip;
         }
         return super.getProperty(propertyIndex);
     }
@@ -83,7 +85,7 @@ public class listeDesProgrammes extends DonneesRetournees implements KvmSerializ
         if(propertyIndex==count+0)
         {
             info.type = PropertyInfo.VECTOR_CLASS;
-            info.name = "liste";
+            info.name = "listeJours";
             info.namespace= "http://etsmtl.ca/";
         }
         super.getPropertyInfo(propertyIndex,arg1,info);

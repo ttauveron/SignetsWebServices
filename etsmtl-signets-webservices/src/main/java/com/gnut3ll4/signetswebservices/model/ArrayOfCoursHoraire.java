@@ -16,7 +16,7 @@ import java.util.Vector;
 import java.util.Hashtable;
 
 
-public class ArrayOfCoursHoraire extends Vector<coursHoraire> implements KvmSerializable
+public class ArrayOfCoursHoraire extends Vector<CoursHoraire> implements KvmSerializable
 {
     
     public ArrayOfCoursHoraire(){}
@@ -33,7 +33,7 @@ public class ArrayOfCoursHoraire extends Vector<coursHoraire> implements KvmSeri
             if (obj!=null && obj instanceof AttributeContainer)
             {
                 AttributeContainer j =(AttributeContainer) soapObject.getProperty(i0);
-                coursHoraire j1= (coursHoraire)__envelope.get(j,coursHoraire.class);
+                CoursHoraire j1= (CoursHoraire)__envelope.get(j,CoursHoraire.class);
                 add(j1);
             }
         }
@@ -52,7 +52,7 @@ public class ArrayOfCoursHoraire extends Vector<coursHoraire> implements KvmSeri
     @Override
     public void getPropertyInfo(int index, @SuppressWarnings("rawtypes") Hashtable arg1, PropertyInfo info) {
         info.name = "coursHoraire";
-        info.type = coursHoraire.class;
+        info.type = CoursHoraire.class;
     	info.namespace= "http://etsmtl.ca/";
     }
     
