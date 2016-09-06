@@ -1,4 +1,4 @@
-package com.gnut3ll4.signetswebservices.model;
+package com.gnut3ll4.signetswebservices.soap;
 
 //----------------------------------------------------
 //

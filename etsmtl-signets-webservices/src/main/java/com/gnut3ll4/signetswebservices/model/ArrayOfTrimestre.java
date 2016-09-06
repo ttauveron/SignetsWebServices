@@ -11,6 +11,8 @@ package com.gnut3ll4.signetswebservices.model;
 
 
 
+import com.gnut3ll4.signetswebservices.soap.ExtendedSoapSerializationEnvelope;
+
 import org.ksoap2.serialization.*;
 import java.util.Vector;
 import java.util.Hashtable;

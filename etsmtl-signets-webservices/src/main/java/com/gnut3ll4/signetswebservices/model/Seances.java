@@ -10,6 +10,9 @@ package com.gnut3ll4.signetswebservices.model;
 //---------------------------------------------------
 
 
+import com.gnut3ll4.signetswebservices.soap.ExtendedSoapSerializationEnvelope;
+import com.gnut3ll4.signetswebservices.soap.Helper;
+
 import java.util.Hashtable;
 import org.ksoap2.serialization.*;
 

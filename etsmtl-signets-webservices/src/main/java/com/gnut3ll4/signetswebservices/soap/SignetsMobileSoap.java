@@ -1,4 +1,4 @@
-package com.gnut3ll4.signetswebservices.model;
+package com.gnut3ll4.signetswebservices.soap;
 
 //----------------------------------------------------
 //
@@ -12,7 +12,18 @@ package com.gnut3ll4.signetswebservices.model;
 import android.os.AsyncTask;
 import android.util.Log;
 
-import com.gnut3ll4.signetswebservices.soap.IServiceEvents;
+import com.gnut3ll4.signetswebservices.model.Etudiant;
+import com.gnut3ll4.signetswebservices.model.ListeCoursHoraire;
+import com.gnut3ll4.signetswebservices.model.ListeDeCours;
+import com.gnut3ll4.signetswebservices.model.ListeDeSessions;
+import com.gnut3ll4.signetswebservices.model.ListeDesActivitesEtProf;
+import com.gnut3ll4.signetswebservices.model.ListeDesCoequipiers;
+import com.gnut3ll4.signetswebservices.model.ListeDesElementsEvaluation;
+import com.gnut3ll4.signetswebservices.model.ListeDesProgrammes;
+import com.gnut3ll4.signetswebservices.model.ListeEvaluationsCours;
+import com.gnut3ll4.signetswebservices.model.ListeHoraireExamensFinaux;
+import com.gnut3ll4.signetswebservices.model.ListeJoursRemplaces;
+import com.gnut3ll4.signetswebservices.model.ListeSeances;
 
 import org.ksoap2.HeaderProperty;
 import org.ksoap2.SoapFault;

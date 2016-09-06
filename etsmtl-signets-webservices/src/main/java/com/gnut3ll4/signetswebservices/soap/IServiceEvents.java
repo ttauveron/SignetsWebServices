@@ -10,8 +10,6 @@ package com.gnut3ll4.signetswebservices.soap;
 //---------------------------------------------------
 
 
-import com.gnut3ll4.signetswebservices.model.OperationResult;
-
 public interface IServiceEvents
 {
     public void Starting();

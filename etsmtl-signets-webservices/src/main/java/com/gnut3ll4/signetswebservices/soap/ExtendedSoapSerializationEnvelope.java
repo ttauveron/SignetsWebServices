@@ -1,4 +1,4 @@
-package com.gnut3ll4.signetswebservices.model;
+package com.gnut3ll4.signetswebservices.soap;
 
 //----------------------------------------------------
 //
@@ -10,6 +10,8 @@ package com.gnut3ll4.signetswebservices.model;
 //---------------------------------------------------
 
 
+
+import com.gnut3ll4.signetswebservices.model.*;
 
 import org.ksoap2.SoapEnvelope;
 import org.ksoap2.serialization.*;
@@ -30,7 +32,7 @@ public class ExtendedSoapSerializationEnvelope extends SoapSerializationEnvelope
     static HashMap< java.lang.String,java.lang.Class> classNames = new HashMap< java.lang.String, java.lang.Class>();
     static {
         classNames.put("http://etsmtl.ca/^^Etudiant",Etudiant.class);
-        classNames.put("http://etsmtl.ca/^^DonneesRetournees",DonneesRetournees.class);
+        classNames.put("http://etsmtl.ca/^^DonneesRetournees", DonneesRetournees.class);
         classNames.put("http://etsmtl.ca/^^ListeDeCours",ListeDeCours.class);
         classNames.put("http://etsmtl.ca/^^Cours",Cours.class);
         classNames.put("http://etsmtl.ca/^^ListeDeSessions",ListeDeSessions.class);
