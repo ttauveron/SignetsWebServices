@@ -1,0 +1,55 @@
+apply plugin: 'com.android.library'
+
+ext {
+    bintrayRepo = 'etsmtl-signets-webservices'
+    bintrayName = 'etsmtl-signets-webservices'
+
+    publishedGroupId = 'com.gnut3ll4'
+    libraryName = 'etsmtl-signets-webservices'
+    artifact = 'etsmtl-signets-webservices'
+
+    libraryDescription = 'A wrapper for Signets on Android'
+
+    siteUrl = 'https://github.com/gnut3ll4/SignetsWebServices'
+    gitUrl = 'https://github.com/gnut3ll4/SignetsWebServices.git'
+
+    libraryVersion = '0.0.4'
+
+    developerId = 'gnut3ll4'
+    developerName = 'Thibaut Tauveron'
+    developerEmail = 'thibaut.tauveron@gmail.com'
+
+    licenseName = 'GNU General Public License, Version 3.0'
+    licenseUrl = 'http://www.gnu.org/licenses/gpl-3.0.html'
+    allLicenses = ["GPL-3.0"]
+}
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion "23.0.3"
+
+    defaultConfig {
+        minSdkVersion 19
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:24.2.0'
+    compile 'joda-time:joda-time:2.9.4'
+
+}
+
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
