@@ -13,7 +13,7 @@ ext {
     siteUrl = 'https://github.com/gnut3ll4/SignetsWebServices'
     gitUrl = 'https://github.com/gnut3ll4/SignetsWebServices.git'
 
-    libraryVersion = '0.0.4'
+    libraryVersion = '0.0.5'
 
     developerId = 'gnut3ll4'
     developerName = 'Thibaut Tauveron'
