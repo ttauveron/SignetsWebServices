@@ -17,9 +17,9 @@ allprojects {
         maven {
             url  "http://dl.bintray.com/gnut3ll4/etsmtl-signets-webservices"
         }
-//        maven { url 'https://oss.sonatype.org/content/repositories/ksoap2-android-releases/' }
-
-
+        maven { 
+            url 'https://oss.sonatype.org/content/repositories/ksoap2-android-releases/' 
+        }
     }
 }
 
